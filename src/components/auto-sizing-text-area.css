@@ -1,0 +1,44 @@
+.auto-sizing-text-area {
+  border: 1px solid black;
+  position: relative;
+}
+.auto-sizing-text-area__textcopy {
+  width: 100%;
+
+  /* make sure the div and the textarea wrap words in the same way */
+  text-align: left;
+  font-size: inherit;
+  padding: 2px;
+  border: none;
+  margin: 0px;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+
+  /* Space for next line of text */
+  padding-bottom: 1.5em;
+}
+.auto-sizing-text-area__input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /*
+   * Until Safari fixes its MutationObserver bug, or supports ResizeObserver:
+   * https://stackoverflow.com/questions/57778941/reactjs-web-app-mutationobserver-use-in-safari-browser-not-as-expected
+   *
+   * Could also conceivably disable resize only in Safari, or poll for change.
+   */
+  resize: none;
+
+  /* make sure the div and the textarea wrap words in the same way */
+  text-align: left;
+  font-size: inherit;
+  padding: 2px;
+  border: none;
+  margin: 0px;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}

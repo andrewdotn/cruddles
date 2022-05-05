@@ -1,0 +1,45 @@
+/* Very basic styles, just enough for a login page
+ * To see changes to this file get applied in browser,
+ * delete compiled dist/login.css and restart with
+ * `NODE_ENV != 'production'`. See login-css.ts.
+ */
+
+body {
+  font-family: sans-serif;
+  font-weight: lighter;
+}
+
+.form {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.button {
+  font-weight: normal;
+  font-size: 110%;
+  border: none;
+  border-radius: 4px;
+  padding: 3px 5px;
+  background-color: gray;
+  color: white;
+  text-decoration: none;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.button:active {
+  background-color: black;
+  position: relative;
+  top: 2px;
+}
+
+.form__element {
+  display: block;
+}
+
+.form__error {
+  font-weight: normal;
+  color: #dc3545;
+}

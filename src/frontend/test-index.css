@@ -1,0 +1,8 @@
+#mocha h1.page-heading {
+  font-weight: bold;
+  font-size: inherit;
+}
+
+#mocha h2.results-summary {
+  font-size: inherit;
+}

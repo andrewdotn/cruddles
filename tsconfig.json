@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    "isolatedModules": true,
+    "module": "CommonJS",
+    "allowJs": true,
+    "checkJs": true,
+    "moduleResolution": "Node",
+    "esModuleInterop": true,
+    "noImplicitAny": true,
+    "importHelpers": true,
+    "alwaysStrict": true,
+    "strict": true,
+    "noEmit": true,
+    "jsx": "react",
+    "lib": ["ES2015", "DOM", "ES2019.object", "es2020.string"],
+    "target": "es2020",
+    "noUnusedLocals": true,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "baseUrl": ".",
+    "paths": {
+      // amazingly, comments are allowed here!
+      // https://github.com/microsoft/TypeScript/pull/5450/files
+      //
+      // this path override is only here until
+      // https://github.com/mtxr/vscode-sqltools/pull/709 is released
+      "@sqltools/formatter": [
+        "node_modules/@sqltools/formatter/lib/sqlFormatter.d.ts"
+      ]
+    },
+    // docs: “If `types` is specified, only packages listed will be
+    // included in the global scope”
+    "types": ["node"]
+  },
+  "include": ["*.ts", "*.js", "src/**/*"],
+  "exclude": ["ormconfig.js", "babel-register.js", "node_modules/**"]
+}

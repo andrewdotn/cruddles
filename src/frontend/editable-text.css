@@ -1,0 +1,23 @@
+.editable-text__input {
+  font-size: 12pt;
+}
+.editable-text__text {
+  cursor: text;
+}
+.editable-text__button {
+  color: gray;
+  display: inline-block;
+  padding: 4px 0;
+}
+.editable-text__button:hover {
+  cursor: pointer;
+  color: black;
+}
+.editable-text__button__right {
+  margin-left: 0.5em;
+}
+.editable-text__error {
+  color: red;
+  white-space: normal;
+  max-width: 300px;
+}

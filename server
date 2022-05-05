@@ -1,0 +1,14 @@
+#!/bin/bash
+
+set -eu
+
+DIR="$(dirname -- "${0}")"
+DIR="$(cd "${DIR}" && pwd -P)"
+
+if [ "${NODE_ENV:-dev}" = "production" ]; then
+    exec node "${DIR}/lib/main.js" "${@+"${@}"}"
+fi
+
+exec node --require "${DIR}/babel-register" \
+    "${DIR}/src/main.ts" \
+    "${@+"${@}"}"

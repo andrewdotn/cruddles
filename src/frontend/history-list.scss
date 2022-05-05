@@ -1,0 +1,24 @@
+@import "variables";
+
+.history-list__field-name {
+  font-weight: 500;
+}
+
+.history-list__row__locked {
+  background-color: $locked-row-color;
+}
+
+.history-list__value {
+  background-color: #f1f1f1;
+}
+.history-list__value-added {
+  color: blue;
+}
+.history-list__value-removed {
+  color: red;
+  text-decoration: line-through;
+}
+.history-list__user {
+  color: darkgreen;
+  font-weight: 600;
+}

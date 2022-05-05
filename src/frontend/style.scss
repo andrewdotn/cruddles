@@ -1,0 +1,233 @@
+@import "variables";
+
+// Partial bootstrap import; often recommended, skipping reboot until spacing
+// issues in table can be addressed.
+
+//@import "bootstrap/dist/css/bootstrap.css";
+
+// Required for drop-down menu items to have proper width
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+@import "~bootstrap/scss/_functions.scss";
+@import "~bootstrap/scss/_variables.scss";
+@import "~bootstrap/scss/_mixins.scss";
+@import "~bootstrap/scss/_utilities.scss";
+
+@import "~bootstrap/scss/_grid.scss";
+
+@import "~bootstrap/scss/_buttons.scss";
+@import "~bootstrap/scss/_dropdown.scss";
+@import "~bootstrap/scss/_nav.scss";
+@import "~bootstrap/scss/_navbar.scss";
+@import "~bootstrap/scss/_card.scss";
+@import "~bootstrap/scss/_media.scss";
+@import "~bootstrap/scss/_spinners.scss";
+@import "~bootstrap/scss/_alert.scss";
+
+@import "../components/auto-sizing-text-area.css";
+
+button.dropdown-item {
+  font-size: inherit;
+}
+
+/* This is for the close button on a bootstrap alert, until custom button styles
+ * and bootstrap button styles can be reconciled. */
+button.close {
+  cursor: pointer;
+  border: none;
+  background-color: inherit;
+  font-weight: bold;
+  color: gray;
+}
+
+body {
+  font-family: sans-serif;
+  font-weight: lighter;
+  font-size: 12pt;
+  margin: 0px;
+}
+
+textarea {
+  font-family: inherit;
+}
+
+.sitemain {
+  display: flex;
+  justify-content: center;
+}
+
+.sitemain__inner {
+  flex: 1 20em;
+  max-width: 80%;
+  position: relative;
+}
+
+.button {
+  font-weight: normal;
+  font-size: 110%;
+  border: none;
+  border-radius: 4px;
+  padding: 3px 5px;
+  background-color: gray;
+  color: white;
+  text-decoration: none;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.button:active {
+  background-color: black;
+  position: relative;
+  top: 2px;
+  transition: background-color 0.25s;
+}
+
+.form__element {
+  display: block;
+}
+
+.form__error {
+  color: #ab0330;
+}
+form ul.error {
+  color: #ab0330;
+}
+
+.sitenav__link {
+  margin-right: 8px;
+}
+
+.objectdetail__id,
+.tasklink__id {
+  color: #cdcdcd;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+td {
+  padding: 2px 4px;
+  border-right: 0.5px solid gray;
+}
+td:last-child,
+th:last-child {
+  border-right: none;
+}
+tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+.errorRow,
+tr.errorRow {
+  background: lightpink;
+}
+
+tr.errorRow {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+tr:nth-child(even) th {
+  background-color: #e8e8e8;
+}
+
+th {
+  border-right: 0.5px solid gray;
+  background-color: #d7d7d7;
+  text-align: left;
+  padding: 0 0.25em;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+@import "./editable-text.css";
+
+.tasklist__link {
+  float: right;
+  margin-top: 2px;
+  font-size: 16pt;
+  line-height: 10pt;
+}
+
+.date-adjuster {
+  text-align: left;
+}
+.date-adjuster__button-area {
+  text-align: right;
+}
+.date-adjuster__heading {
+  font-weight: normal;
+  margin: 2px 0;
+}
+.date-adjust__plus-button {
+  width: 3.5em;
+}
+
+.date-summary {
+  display: block;
+}
+
+.editable-status {
+  white-space: nowrap;
+}
+.editable-user {
+  white-space: nowrap;
+}
+
+.editable-pin__pin {
+  display: block;
+}
+
+@import "history-list";
+
+.row-number {
+  background-color: white;
+  text-align: right;
+  color: gray;
+}
+
+// Used in visits table
+thead.header-wrap-ok th {
+  white-space: normal;
+  word-break: normal;
+  word-wrap: normal;
+}
+.visit-table {
+  white-space: nowrap;
+  word-wrap: break-spaces;
+}
+
+.visit-table {
+  white-space: nowrap;
+  word-wrap: break-spaces;
+}
+.visit-table td {
+  font-size: small;
+  max-width: 20em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.navdropdown__checkbox__unchecked::before {
+  content: url('data:image/svg+xml; utf8, <svg width="0.75em" height="0.75em" viewBox="0 0 16 16" class="bi bi-square" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/> </svg>');
+  position: absolute;
+  margin-left: -1em;
+}
+
+.navdropdown__checkbox__checked::before {
+  content: url('data:image/svg+xml; utf8, <svg width="0.75em" height="0.75em" viewBox="0 0 16 16" class="bi bi-check2-square" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M15.354 2.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L8 9.293l6.646-6.647a.5.5 0 0 1 .708 0z"/><path fill-rule="evenodd" d="M1.5 13A1.5 1.5 0 0 0 3 14.5h10a1.5 1.5 0 0 0 1.5-1.5V8a.5.5 0 0 0-1 0v5a.5.5 0 0 1-.5.5H3a.5.5 0 0 1-.5-.5V3a.5.5 0 0 1 .5-.5h8a.5.5 0 0 0 0-1H3A1.5 1.5 0 0 0 1.5 3v10z"/></svg>');
+  position: absolute;
+  margin-left: -1em;
+}
