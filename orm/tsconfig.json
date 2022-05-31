@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "moduleResolution": "Node",
+    "noImplicitAny": true,
+    "importHelpers": true,
+    "alwaysStrict": true,
+    "strict": true,
+    "noEmit": true,
+    "jsx": "react",
+    "lib": ["ES2020", "DOM"],
+    "target": "esnext",
+    "module":"ESNext",
+    "noUnusedLocals": true,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "resolveJsonModule": true,
+    "baseUrl": ".",
+    "paths": {
+      "@rf0/*": ["../*/src"],
+      "@rf0/testutil/*": ["../testutil/src/*"],
+      "@rf0/djangoscript/*": ["../djangoscript/src/*"]
+    },
+    "typeRoots": ["./node_modules/@types", "../node_modules/@types"]
+  }
+}
